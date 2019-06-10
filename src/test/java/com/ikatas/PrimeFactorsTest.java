@@ -3,6 +3,8 @@ package com.ikatas;
 import org.junit.Test;
 
 import static java.util.Collections.emptyList;
+import static java.util.Collections.singletonList;
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
@@ -14,5 +16,10 @@ public class PrimeFactorsTest {
     @Test
     public void noFactors() {
         assertThat(PrimeFactors.of(1), is(emptyList()));
+    }
+
+    @Test
+    public void primeNumbers() {
+        assertThat(PrimeFactors.of(2), equalTo(singletonList(2)));
     }
 }
