@@ -2,6 +2,7 @@ package com.ikatas;
 
 import org.junit.Test;
 
+import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
 import static java.util.Collections.singletonList;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -22,5 +23,10 @@ public class PrimeFactorsTest {
     public void primeNumbers() {
         assertThat(PrimeFactors.of(2), equalTo(singletonList(2)));
         assertThat(PrimeFactors.of(3), equalTo(singletonList(3)));
+    }
+
+    @Test
+    public void compositeNumberThatContainingSameFactors() {
+        assertThat(PrimeFactors.of(4), equalTo(asList(2, 2)));
     }
 }
