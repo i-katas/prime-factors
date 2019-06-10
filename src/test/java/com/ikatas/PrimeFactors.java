@@ -10,7 +10,7 @@ import java.util.List;
 public class PrimeFactors {
     public static List<Integer> of(int n) {
         List<Integer> primes = new ArrayList<>();
-        if (n % 2 == 0) {
+        while (n % 2 == 0) {
             primes.add(2);
             n /= 2;
         }
