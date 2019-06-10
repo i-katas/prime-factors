@@ -29,4 +29,9 @@ public class PrimeFactorsTest {
     public void compositeNumberThatContainingSameFactors() {
         assertThat(PrimeFactors.of(4), equalTo(asList(2, 2)));
     }
+
+    @Test
+    public void compositeNumberThatContainingDiffFactors() {
+        assertThat(PrimeFactors.of(6), equalTo(asList(2, 3)));
+    }
 }
