@@ -21,5 +21,6 @@ public class PrimeFactorsTest {
     @Test
     public void primeNumbers() {
         assertThat(PrimeFactors.of(2), equalTo(singletonList(2)));
+        assertThat(PrimeFactors.of(3), equalTo(singletonList(3)));
     }
 }
