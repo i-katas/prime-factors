@@ -15,6 +15,11 @@ public class PrimeFactors {
             primes.add(candidate);
             n /= candidate;
         }
+        candidate++;
+        while (n % candidate == 0) {
+            primes.add(candidate);
+            n /= candidate;
+        }
         if (n > 1) {
             primes.add(n);
         }
