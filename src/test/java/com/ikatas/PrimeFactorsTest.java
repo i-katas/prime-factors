@@ -2,6 +2,7 @@ package com.ikatas;
 
 import org.junit.Test;
 
+import static java.lang.Integer.MAX_VALUE;
 import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
 import static java.util.Collections.singletonList;
@@ -35,5 +36,10 @@ public class PrimeFactorsTest {
     @Test
     public void compositeNumberThatContainingDiffFactors() {
         assertThat(PrimeFactors.of(6), equalTo(asList(2, 3)));
+    }
+
+    @Test(timeout = 500)
+    public void performance() {
+        assertThat(PrimeFactors.of(MAX_VALUE), equalTo(singletonList(MAX_VALUE)));
     }
 }
