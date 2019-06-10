@@ -11,14 +11,12 @@ public class PrimeFactors {
     public static List<Integer> of(int n) {
         List<Integer> primes = new ArrayList<>();
         int candidate = 2;
-        while (n % candidate == 0) {
-            primes.add(candidate);
-            n /= candidate;
-        }
-        candidate++;
-        while (n % candidate == 0) {
-            primes.add(candidate);
-            n /= candidate;
+        while (candidate < n) {
+            while (n % candidate == 0) {
+                primes.add(candidate);
+                n /= candidate;
+            }
+            candidate++;
         }
         if (n > 1) {
             primes.add(n);
