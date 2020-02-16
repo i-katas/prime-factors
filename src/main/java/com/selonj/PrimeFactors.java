@@ -6,13 +6,11 @@ import java.util.ArrayList;
 public class PrimeFactors {
   public static List<Integer> of(int n) {
     List<Integer> primes = new ArrayList<>();
-    int m = 2;
-    while(n > 1) {
+    for(int m = 2; n > 1; m++) {
       while(n % m == 0) {
         primes.add(m);
         n /= m;
       }
-      m++;
     }
     return primes;
   }
