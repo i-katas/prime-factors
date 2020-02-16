@@ -1,3 +1,4 @@
+- # Number contains same factors?
 - ~~primeFactors(6) = [2, 3]~~
 - ~~primeNumbers?~~
 - ~~primeFactors(1) = []~~

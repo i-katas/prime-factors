@@ -22,4 +22,10 @@ public class PrimeFactorsTest {
   public void compositeNumberContainingDifferentFactors() throws Throwable {
     assertThat(PrimeFactors.of(6), contains(2, 3));
   }
+
+  @Test
+  public void compositeNumberContainingSameFactors() throws Throwable {
+    assertThat(PrimeFactors.of(4), contains(2, 2));
+    assertThat(PrimeFactors.of(8), contains(2, 2, 2));
+  }
 }
