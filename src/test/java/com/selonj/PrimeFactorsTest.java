@@ -17,4 +17,9 @@ public class PrimeFactorsTest {
     assertThat(PrimeFactors.of(2), contains(2));
     assertThat(PrimeFactors.of(3), contains(3));
   }
+
+  @Test
+  public void compositeNumberContainingDifferentFactors() throws Throwable {
+    assertThat(PrimeFactors.of(6), contains(2, 3));
+  }
 }
