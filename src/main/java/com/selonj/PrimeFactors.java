@@ -7,11 +7,12 @@ public class PrimeFactors {
   public static List<Integer> of(int n) {
     List<Integer> primes = new ArrayList<>();
     int m = 2;
-    if(n > 1) {
+    while(n > 1) {
       while(n % m == 0) {
         primes.add(m);
         n /= m;
       }
+      m++;
     }
     if(n > 1) {
       primes.add(n);

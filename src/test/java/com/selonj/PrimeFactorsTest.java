@@ -27,6 +27,6 @@ public class PrimeFactorsTest {
   public void compositeNumberContainingSameFactors() throws Throwable {
     assertThat(PrimeFactors.of(4), contains(2, 2));
     assertThat(PrimeFactors.of(8), contains(2, 2, 2));
-    //assertThat(PrimeFactors.of(9), contains(3, 3));
+    assertThat(PrimeFactors.of(9), contains(3, 3));
   }
 }
