@@ -1,0 +1,2 @@
+- primeFactors(6) = [2, 3]
+- primeFactors(1) = []
