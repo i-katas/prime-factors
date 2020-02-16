@@ -29,4 +29,9 @@ public class PrimeFactorsTest {
     assertThat(PrimeFactors.of(8), contains(2, 2, 2));
     assertThat(PrimeFactors.of(9), contains(3, 3));
   }
+
+  @Test(timeout = 500)
+  public void bigPrimeNumber() throws Throwable {
+    assertThat(PrimeFactors.of(Integer.MAX_VALUE), contains(Integer.MAX_VALUE));
+  }
 }
