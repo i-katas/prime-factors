@@ -14,9 +14,6 @@ public class PrimeFactors {
       }
       m++;
     }
-    if(n > 1) {
-      primes.add(n);
-    }
     return primes;
   }
 }
